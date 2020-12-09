@@ -1,44 +1,87 @@
 {
-   "swagger": "2.0",
-   "info": {
-      "version": "1.0.0",
-      "title": "nodejsexpressapp API"
-   },
-   "consumes": [
-      "text/plain"
-   ],
-   "produces": [
-      "application/json"
-   ],
-   "paths": {
-      "/health": {
-         "get": {
-            "operationId": "get",
-            "description": "Get health status of nodejsmicroservice",
-            "responses": {
-               "200": {
-                  "description": "Health check response",
-                  "schema": {
-                     "$ref": "#/definitions/healthResponse"
-                  },
-                  "examples": {
-                     "application/json": {
-                        "status": "UP"
-                     }
-                  }
-               }
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "nodejsexpressapp API"
+  },
+  "consumes": ["text/plain"],
+  "produces": ["application/json"],
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "get",
+        "description": "Get health status of nodejsmicroservice",
+        "responses": {
+          "200": {
+            "description": "Health check response",
+            "schema": {
+              "$ref": "#/definitions/healthResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": "UP",
+                "dbConnectionStatus": "OFF"
+              }
             }
-         }
+          }
+        }
       }
-   },
-   "definitions": {
-      "healthResponse": {
-         "type": "object",
-         "properties": {
-            "status": {
-               "type": "string"
+    }
+  },
+  "definitions": {
+    "healthResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "dbConectionStatus": {
+          "type": "string"
+        }
+      }
+    },
+    "Camp": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "$oid"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "more": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "rateCount": {
+          "type": "integer"
+        },
+        "rateValue": {
+          "type": "integer"
+        },
+        "loc": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "coordinates": {
+              "type": "array",
+              "items":{
+                 "type": "string"
+              }
             }
-         }
+          }
+        }
       }
-   }
+    }
+  }
 }

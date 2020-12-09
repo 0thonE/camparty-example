@@ -1,0 +1,69 @@
+$slider-height:35em;
+$slider-widht:40em;
+
+.v-center-login {
+    position: relative;
+    height: 100vh;
+
+    .bx--row {
+        // margin-top: $spacing-10+$spacing-11;
+        position: absolute;
+        min-width: 40em;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translate(-48%, 0%);
+    }
+}
+
+.center-google-login {
+    position: relative;
+    height: 100vh;
+
+    .google-login {
+        position: absolute;
+        top: 40%;
+        left: 25%;
+    }
+}
+
+.slider{
+    position: absolute;
+    right: 50px;
+    height: $slider-height;
+    width: $slider-widht;
+
+    overflow: hidden;
+    
+}
+.slides{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.slider-wrapper{
+    display: flex;
+    position: absolute;
+    transition: transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    height: 90vh;
+    width: 200%;
+    left: 0px;
+    
+    .slide{
+        flex: 1;
+        height: $slider-height;
+        min-width: 40em;
+        top: 20%;
+        position: relative;
+    }
+}
+
+
+.userForm{
+    padding-left:   12%;
+    padding-right:  12%;
+}
