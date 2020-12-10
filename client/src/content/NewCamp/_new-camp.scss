@@ -1,0 +1,35 @@
+.image-uploader {
+    max-width: inherit;
+    width: 100%;
+
+    height: 100%;
+    max-height: inherit;
+
+}
+
+.upload-placeholder{
+    height: 90% !important;
+}
+
+.bx--file-browse-btn {
+    // max-height: inherit !important;
+    max-width: inherit !important;
+}
+.removeImage{
+    position: absolute;
+    top: -4%;
+    right: 8%;
+    z-index: 3;
+}
+
+.bx--file {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+
+// .uploade-placeholder{
+// }

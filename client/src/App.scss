@@ -1,0 +1,13 @@
+@import 'carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family.scss';
+@import 'carbon-components/scss/globals/scss/vendor/@carbon/layout/scss/breakpoint.scss';
+@import 'carbon-components/scss/globals/scss/typography.scss';
+@import 'carbon-components/scss/globals/scss/vars.scss';
+@import "./vars";
+@import "./patterns";
+
+@import './components/Navbar/navbar';
+@import './content/LandingPage/landing-page';
+@import './content/Camps/camps';
+@import './content/Camp/camp';
+@import './content/NewCamp/new-camp';
+@import './content/Login/logins';
