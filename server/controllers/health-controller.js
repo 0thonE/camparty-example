@@ -1,13 +1,7 @@
-let dbStatusStr = 'OFF';
-
 // get health of application
-exports.getHealth  = (req, res) => {
+exports.getHealth = (req, res) => {
+  console.log('In controller - getHealth');
   res.json({
     status: 'UP',
-    dbConectionStatus: dbStatusStr
   });
-};
-
-exports.updateDbStatus = (status) => {
-  dbStatusStr=status
 };
